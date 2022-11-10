@@ -17,6 +17,7 @@ body {
 	align-items: center;
     min-height: 100vh;
     font-family: "Manrope Variable";
+    font-size: 3rem;
 }
 
 .btn {
@@ -28,6 +29,20 @@ body {
     border: 2px solid var(--purple);
     border-radius: 0.5em;
     transition: all 250ms ease;
+    font-size: 1.5em;
+}
+
+a:not(.btn) {
+    color: var(--purple);
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+li::before {
+    content: "—";
+    font-weight: bold;
 }
 
 .btn:hover {
@@ -37,7 +52,14 @@ body {
 
 img {
     width: 80vw;
+    max-width: 800px;
+    min-width: 200px;
     object-fit: contain;
     max-height: 60vh;
     margin-bottom: 2em;
+}
+
+h2 {
+    margin-bottom: 0;
+    margin-top: 2em;
 }
