@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Manrope Variable';
+    src: url('Manrope.ttf') format('truetype-variations');
+    font-weight: 200 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --purple: #343E91;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+    flex-direction: column;
+	align-items: center;
+    min-height: 100vh;
+    font-family: "Manrope Variable";
+}
+
+.btn {
+    text-decoration: none;
+    padding: 1em 2em;
+    background: var(--purple);
+    color: white;
+    font-weight: bold;
+    border: 2px solid var(--purple);
+    border-radius: 0.5em;
+    transition: all 250ms ease;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--purple);
+}
+
+img {
+    width: 80vw;
+    object-fit: contain;
+    max-height: 60vh;
+    margin-bottom: 2em;
+}
