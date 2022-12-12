@@ -17,6 +17,7 @@ body {
 	align-items: center;
     min-height: 100vh;
     font-family: "Manrope Variable";
+    margin: 0 1rem;
 }
 
 @media (max-width: 1000px) {
@@ -25,22 +26,104 @@ body {
     }
 }
 
-.btn {
+.button {
     text-decoration: none;
     padding: 1em 2em;
     background: var(--purple);
     color: white;
     font-weight: bold;
-    border: 2px solid var(--purple);
-    border-radius: 0.5em;
+    border: 0.5rem solid var(--purple);
+    /* border-radius: 0.5em; */
     transition: all 250ms ease;
     font-size: 1.5em;
 }
 
-a:not(.btn) {
+.button:hover, .button:focus {
+    background: transparent;
+    color: var(--purple);
+}
+
+a:not(.button) {
     color: var(--purple);
     text-decoration: none;
 }
+
+nav:not(open) {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 100vh;
+}
+
+nav {
+    transition: all 0.25s ease;
+}
+
+nav::before {
+    content: '';
+    width: 200px;
+    height: 7rem;
+    background: black;
+    position: fixed;
+    bottom: 0;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    animation: all 250ms ease;
+}
+
+nav:not(.open) *:not(img) {
+    opacity: 0;
+}
+
+nav.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+nav img {
+    height: 6rem;
+    position: fixed;
+    bottom: 0;
+}
+
+nav ol {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+nav li {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+nav li::before {
+    content: '';
+}
+
+nav li a {
+    color: white !important;
+    font-size: 10vw;
+    font-weight: 800;
+    transition: all 0.25s ease;
+}
+
+nav li a:hover, nav li a:focus {
+    font-size: 12vw;
+    font-weight: 900;
+}
+
 
 li {
     list-style: none;
@@ -55,7 +138,7 @@ li::before {
     color: var(--purple);
 }
 
-img {
+h1 img {
     width: 80vw;
     max-width: 800px;
     min-width: 200px;
@@ -65,6 +148,33 @@ img {
 }
 
 h2 {
-    margin-bottom: 0;
-    margin-top: 2em;
+    color: var(--purple);
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    margin: 0;
+    font-size: 2rem;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    grid-template-areas: "title article";
+}
+
+section h2 {
+    grid-area: "title";
+}
+section article {
+    grid-area: "article";
+}
+
+article h1 {
+    margin-top: 0;
+}
+article {
+    width: 100%;
+}
+article .more::before {
+    content: '->';
 }

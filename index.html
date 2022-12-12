@@ -3,26 +3,42 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <img src="n7beats-wordmark-black.png" alt="n7beats" />
-    <a href="http://discord.n7beats.org" class="btn">Discord</a>
-    <h2>Partenariats</h2>
-    <ul><li><a href="/7fault"><img class=7fault src="/7fault.png"/></a></li></ul>
-<style>
-.7fault {
-	height: 3rem;
-}
-</style>
-    <h2>Autopromo</h2>
-    <ul>
-      <li>
-        <a
-          href="https://open.spotify.com/artist/1aiwckDSNhbePJRW1Pr17J?si=hdFnaF0IQCuBYYVULzDa0g"
-          >Spotify d'Alexandre Trotel</a
-        >
-      </li>
-      <li>
-        <a href="https://ewen.works/to/spotify">Spotify d'Ewen Le Bihan</a>
-      </li>
-    </ul>
+    <nav>
+      <ol>
+        <li><a href="/formations/index.html">formations</a></li>
+        <li><a href="/paternariats/">partenariats</a></li>
+        <li><a href="/productions/">productions</a></li>
+        <li><a href="/bureau.html">bureau</a></li>
+      </ol>
+
+      <img
+        onclick="toggleMenu()"
+        src="n7beats-favicon-white-on-black.svg"
+        alt="menu"
+      />
+      <script>
+        function toggleMenu() {
+          document.querySelector("nav").classList.toggle("open");
+        }
+      </script>
+    </nav>
+
+    <h1><img src="n7beats-wordmark-black.png" alt="n7beats" /></h1>
+    <p>Club de production musicale de l'<a href="https://enseeiht.fr">n7</a></p>
+    <a href="/discord" class="button">discord</a>
+
+    <section>
+      <h2>Formations</h2>
+      <article>
+        <h1>Sound Design — Partie I</h1>
+        <img src="" alt="" />
+        <a class="more" href="/formations/sound-design.html">plus</a>
+      </article>
+      <article>
+        <h1>Sound Design — Partie I</h1>
+        <img src="" alt="" />
+        <a class="more" href="/formations/sound-design.html">plus</a>
+      </article>
+    </section>
   </body>
 </html>
