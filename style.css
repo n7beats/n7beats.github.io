@@ -114,13 +114,13 @@ nav li::before {
 
 nav li a {
     color: white !important;
-    font-size: 10vw;
+    font-size: 10vmin;
     font-weight: 800;
     transition: all 0.25s ease;
 }
 
 nav li a:hover, nav li a:focus {
-    font-size: 12vw;
+    font-size: 12vmin;
     font-weight: 900;
 }
 
