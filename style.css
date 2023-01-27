@@ -150,8 +150,8 @@ h1 img {
 h2 {
     color: var(--purple);
     text-transform: uppercase;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
+    /* writing-mode: vertical-lr;
+    text-orientation: upright; */
     margin: 0;
     font-size: 2rem;
 }
@@ -177,4 +177,16 @@ article {
 }
 article .more::before {
     content: '->';
+}
+
+.inline-nav {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.inline-nav a {
+    color: var(--purple);
+    text-decoration: none;
+    font-weight: bold;
 }
