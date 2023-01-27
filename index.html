@@ -13,24 +13,28 @@
 
       <img
         onclick="toggleMenu()"
-        src="/n7beats-favicon-white-on-black.svg"
+        src="/n7beats-favicon-white-on-color.png"
+        type="image/svg+xml"
         alt="menu"
       />
+
       <script>
         function toggleMenu() {
-          const nav = document.querySelector("nav");
+          const nav = document.querySelector("nav")
           nav.classList.toggle("open")
           if (nav.classList.contains("open")) {
             nav.querySelector("img").src = "/white-close-icon.svg"
           } else {
-            nav.querySelector("img").src = "/n7beats-favicon-white-on-black.svg"
+            nav.querySelector("img").src = "/n7beats-favicon-white-on-color.png"
           }
         }
       </script>
     </nav>
 
     <h1><img src="n7beats-wordmark-black.png" alt="n7beats" /></h1>
-    <p class="after-logo">Club de production musicale de l'<a href="https://enseeiht.fr">n7</a></p>
+    <p class="after-logo">
+      Club de production musicale de l'<a href="https://enseeiht.fr">n7</a>
+    </p>
     <a href="https://discord.gg/JaRyuxANdz" class="button">discord</a>
     <ul class="inline-nav">
       <li><a href="/formations">formations</a></li>
