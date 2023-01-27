@@ -192,6 +192,7 @@ article .more::before {
     padding-left: 0;
 }
 
+
 .inline-nav li {
     list-style: none;
     text-align: center;
@@ -205,6 +206,11 @@ article .more::before {
     color: var(--purple);
     text-decoration: none;
     font-weight: bold;
+}
+
+.inline-nav a:hover, .inline-nav a:focus {
+    background: var(--purple);
+    color: white;
 }
 
 footer {

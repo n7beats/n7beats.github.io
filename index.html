@@ -18,7 +18,13 @@
       />
       <script>
         function toggleMenu() {
-          document.querySelector("nav").classList.toggle("open")
+          const nav = document.querySelector("nav");
+          nav.classList.toggle("open")
+          if (nav.classList.contains("open")) {
+            nav.querySelector("img").src = "/white-close-icon.svg"
+          } else {
+            nav.querySelector("img").src = "/n7beats-favicon-white-on-black.svg"
+          }
         }
       </script>
     </nav>
