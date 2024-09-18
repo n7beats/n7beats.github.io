@@ -21,13 +21,15 @@
 			{@html longDescriptionHtml}
 		</section>
 		<ul class="links">
-            <li>
-                <a href="/members">membres</a>
-            </li>
+			<li>
+				<a href="/members">membres</a>
+			</li>
 			{#each links as { url, text }}
-				<li>
-					<a href={url?.toString() ?? ''}>{text}</a>
-				</li>
+				{#if url && new URL(url).hostname !== 'n7beats.org'}
+					<li>
+						<a href={url?.toString() ?? ''}>{text}</a>
+					</li>
+				{/if}
 			{/each}
 		</ul>
 	{/if}
@@ -41,7 +43,7 @@
 		align-items: center;
 		min-height: 100vh;
 		row-gap: 3rem;
-        padding: 2rem;
+		padding: 2rem;
 	}
 
 	h1 {
@@ -53,9 +55,9 @@
 		inline-size: 5rem;
 	}
 
-    header a {
-        margin-top: 1rem;
-    }
+	header a {
+		margin-top: 1rem;
+	}
 
 	header {
 		display: flex;
