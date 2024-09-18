@@ -1,0 +1,7 @@
+import{c as p,g as y,P as g}from"../chunks/graphql.CS0eK1Bf.js";import{e as h,s as S,f as C,u as $,g as b,h as q}from"../chunks/scheduler.D3dlvXEJ.js";import{S as v,i as P,s as H,H as O,o as m,g as U,m as w,a as c,r as R,p as j,d}from"../chunks/index.DMZewVnU.js";var I="$$_urql",L=a=>{h(I,a)};const T=!0,z="always";async function B(){return p.query(y(`
+            query n7beats_root_layout($uid: String!) {
+                group(uid: $uid) {
+                    color
+                }
+            }
+        `),{uid:g}).toPromise().then(a=>a.data)}const E=Object.freeze(Object.defineProperty({__proto__:null,load:B,prerender:T,trailingSlash:z},Symbol.toStringTag,{value:"Module"}));function D(a){var _;let l,o,u=`<style>:root{ --primary: ${((_=a[0].group)==null?void 0:_.color)??"magenta"} }</style>`,r,s;const n=a[2].default,e=C(n,a,a[1],null);return{c(){e&&e.c(),l=H(),o=new O(!1),r=m(),this.h()},l(t){e&&e.l(t),l=U(t),o=w(t,!1),r=m(),this.h()},h(){o.a=r},m(t,i){e&&e.m(t,i),c(t,l,i),o.m(u,t,i),c(t,r,i),s=!0},p(t,[i]){var f;e&&e.p&&(!s||i&2)&&$(e,n,t,t[1],s?q(n,t[1],i,null):b(t[1]),null),(!s||i&1)&&u!==(u=`<style>:root{ --primary: ${((f=t[0].group)==null?void 0:f.color)??"magenta"} }</style>`)&&o.p(u)},i(t){s||(R(e,t),s=!0)},o(t){j(e,t),s=!1},d(t){t&&(d(l),d(r),o.d()),e&&e.d(t)}}}function G(a,l,o){let{$$slots:u={},$$scope:r}=l;L(p);let{data:s}=l;return a.$$set=n=>{"data"in n&&o(0,s=n.data),"$$scope"in n&&o(1,r=n.$$scope)},[s,r,u]}class F extends v{constructor(l){super(),P(this,l,G,D,S,{data:0})}}export{F as component,E as universal};
