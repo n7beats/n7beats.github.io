@@ -4,10 +4,12 @@
 	import type { PageData } from './$types';
 
 	setContextClient(client);
-
+	export let data: PageData;
 </script>
 
 <slot></slot>
+
+{@html `<style>:root{ --primary: ${data.group?.color ?? 'magenta'} }</style>`}
 
 <style>
 	:root {

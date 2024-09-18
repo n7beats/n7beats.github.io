@@ -1,6 +1,9 @@
 import { PUBLIC_CHURROS_GROUP_UID } from '$env/static/public';
 import { client, gql } from '$lib/graphql';
 
+export const prerender = true;
+export const trailingSlash = 'always';
+
 export async function load() {
 	return client
 		.query(
